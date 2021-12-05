@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html, body {
+    
+}
+body {
+    padding: 15px;
+}
+p{
+    padding: 3px;
+    margin: 3px;
+}
+
+ul {
+    margin-left: 50px;
+}
+
+a {
+    text-decoration: none;
+}
+/*-- Kiválasztja az összes olyan elemet, amelynek class = "intro" formázási osztály a tulajdonsága*/
+/*.intro {
+    background-color: yellow;
+    border: 1px solid red;
+}*/
+
+/*-- Kiválasztja az összes elemet, amelyekben a name1 és a name2 is meg van adva az osztályattribútumában --*/
+/*.name1.name2 {
+    background-color: yellow;
+    border: 1px solid red;
+}*/
+
+/*-- Kiválasztja az összes name2 elemet, amely a name1 elem leszármazottja ----*/
+/*.name1 .name2 {
+    background-color: yellow;
+    border: 1px solid red;
+}*/
+
+/*-- Kiválasztja az id = "lname" elemet ---*/
+/*#lname {
+    background-color: yellow;
+    border: 1px solid red;
+}*/
+
+/*-- Kiválasztja az összes elemet ---*/
+/** {
+    background-color: yellow;
+    border: 1px solid red;
+}*/
+
+/*-- Kiválasztja az összes <p> elemet, amelyek class = "name1" attribútummal rendelkeznek ---*/
+/*p.name1 {
+    background-color: yellow;
+    border: 1px solid red;
+}*/
+
+/*-- Kiválasztja az összes <div> és minden <p> elemet ---*/
+/*div, p {
+    background-color: yellow;
+    border: 1px solid red;
+}*/
+
+/*-- Kiválasztja az összes <p> elemet a <div> elemekben ---*/
+/*div p {
+    background-color: yellow;
+    border: 1px solid red;
+}*/
+
+/*-- Kiválasztja az összes <p> elemet, ahol a szülő <div> elem ---*/
+/*div > p {
+    background-color: yellow;
+    border: 1px solid red;
+}*/
+
+/*-- Kiválasztja az összes <p> elemet, amely közvetlenül a <div> elemek után helyezkedik el ---*/
+/*div + p {
+    background-color: yellow;
+    border: 1px solid red;
+}*/
+
+/*-- Kiválaszt minden <ul> elemet, amelyet egy <p> elem előz meg ---*/
+/*p ~ ul {
+    background-color: yellow;
+    border: 1px solid red;
+}*/
+
+/*-- Kiválaszt minden <ul> elemet, amelyet egy <p> elem előz meg ---*/
+li:last-child {
+    background-color: yellow;
+    border: 1px solid red;
+}
+

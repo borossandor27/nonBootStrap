@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <title>Elrendezések BootStrap nélkül</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="bs/bootstrap-4.3.1-dist/css/bootstrap.css" />
+        <script src="bs/bootstrap-4.3.1-dist/js/bootstrap.bundle.js" ></script>
+        <link rel="stylesheet" href="css/nonCSS.css">
+        <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+
+    </head>
+    <body>
+        <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Menü</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                  <a class="nav-item nav-link active" href="index.html">Kezdőlap</a>
+                  <a class="nav-item nav-link active" href="index.html">Kezdőlap</a>
+                <a class="nav-item nav-link" href="#">Float</a>
+                <a class="nav-item nav-link" href="#">Flex</a>
+                <a class="nav-item nav-link" href="#">Grid</a>
+              </div>
+            </div>
+         </nav>
+            <h1>BootStrap a kényelem</h1>
+            <section>
+                <p>A JavaScript nélkülözhetetlen eleme minden dinamikus weboldalnak. 
+                    Ha nem lenne, akkor csak egyoldalú lehetne a kommunikáció, a felhasználó 
+                    semmilyen interakcióra nem lenne képes az oldalunkon.</p>
+                <p>Alkalmazása azonban nagyon nagy körültekintést kíván. Egy elhibázott kód miatt könnyen kifagyhat a böngésző. 
+                    Az optimalizálatlan kódok miatt elviselhetetlenül belassulhat az oldalunk. A felhasználó egyszerre nagyon sok 
+                    oldalt használhat, amelyeken az egyes szkriptek futtatása igen sok erőforrást igényelhet. Tovább növeli a 
+                    problémát, hogy a böngészők nem teljesen egységesek az implementálásban.</p>
+                <p>A gyakran ismétlődő feladatok megoldására kínálnak ingyenesen kész megoldásokat a különböző keretrendszerek. 
+                    Sajnos már akkor is ezekhez nyúlunk, amikor a kényelmen kívül semmi nem indokolja a használatukat. </p>
+                <h4>Elterjedtebb JavaScript keretrendszerek</h4>
+                <ul>
+                    <li><strong>jQuery:</strong> a DOM elérésre fókuszál.</li>
+                    <li><strong>Bootstrap:</strong> az alap HTML-ben nem létező de hasznos grafikus elemeket valósít meg.</li>
+                    <li><strong>Angular:</strong> a HTML-t attribútumokkal egészíti ki, ezáltal kitágítva a lehetőségeket.</li>
+                    <li><strong>Ext JS:</strong> leginkább diagramok készítésére alkalmas.</li>
+                    <li><strong>React:</strong> a Facebook általános célú reaktív keretrendszere.</li>
+                    <li><strong>Apps Script:</strong> a Google általános célú keretrendszere.</li>
+                    <li><strong>VueJS:</strong> reaktív, komponens-orientált JavaScript keretrendszer.</li>
+                </ul>
+            </section>
+            <section>
+                <h4>A Javascript framework használatának előnyei</h4>
+                <ul>
+                    <li><strong>Hatékonyság:</strong> A fejlesztési időt nagyban lerövidíti</li>
+                    <li><strong>Biztonság:</strong> A framework-k mögött álló jelentős tech vállalatok mint a Google, Facebook, valamint a nagy létszámú fejlesztői közösség a biztosítéka arra, hogy a framework megfeleljen napjaink biztonsági elvárásainak</li>
+                    <li><strong>Költség:</strong> Mivel a top framework-k ingyenesek, és nem mellékesen nyílt forráskóduak, jelentősen csökkentheti a web applikációk költségeit</li>
+                </ul>
+            </section>
+            <section>
+                <h4>Hogy miért ne használjuk?</h4>
+                <ul>
+                    <li><strong>Nagy méret:</strong> Mindegyik keretrendszer egyre komplexebb megoldásokat igyekszik kínálni, így verziónként egyre nő a méretük. Néhány száz kilobyte a GB/sec átvitelnél nem tűnik soknak, de egy mobil készülék esetén már komoly kihívást jelenthet. Ráadásul fizetős kapcsolat esetén ...   </li>
+                    <li><strong>Kihasználatlanság:</strong> Mivel igyekeznek minden gyakori feladatra több megoldást kínálni, ezért lehetetlen <i>(értelmetlen)</i> olyan site-ot készíteni, amely minden kódsort felhasznál. Gyakran csak 10-20%-át használjuk egy-egy megvalósításnál.</li> 
+                    <li><strong>Kötöttségek:</strong> Ha nem tetszik a keretrendszer kínálta lehetőség, akkor nagyon jelentős plusz munkával tudjuk kedvünk szerint alakítani vagy egyáltalán nem.</li>
+                    <li><strong>Támogatottság:</strong> A folyamatos fejlesztések miatt <strong>gyorsan váltják egymást a verziók</strong> és gyakran még fizetős rendszerek esetén sem tudjuk a régiekhez tartozó támogatást megkapni.</li>
+                </ul>
+            </section>            
+            <section>
+                <h4>bootstrap-4.3.1-dist méretei</h4>
+                <div class="row">
+                <table class="table table-striped table-hover table-sm col-5 ml-2" >
+                    <caption style="caption-side: top;">bootstrap-4.3.1-dist CSS fájlok és méreteik</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">fájlnév</th>
+                            <th scope="col" class="text-right">méret<br>(byte)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>bootstrap-grid.css</td><td  class="text-right">64˙548</td></tr>
+                        <tr><td>bootstrap-grid.css.map</td><td  class="text-right">151˙749</td></tr>
+                        <tr><td>bootstrap-grid.min.css</td><td  class="text-right">48˙488</td></tr>
+                        <tr><td>bootstrap-grid.min.css.map</td><td  class="text-right">108˙539</td></tr>
+                        <tr><td>bootstrap-reboot.css</td><td  class="text-right">4˙897</td></tr>
+                        <tr><td>bootstrap-reboot.css.map</td><td  class="text-right">76˙483</td></tr>
+                        <tr><td>bootstrap-reboot.min.css</td><td  class="text-right">4˙021</td></tr>
+                        <tr><td>bootstrap-reboot.min.css.map</td><td  class="text-right">32˙461</td></tr>
+                        <tr><td>bootstrap.css</td><td  class="text-right">192˙348</td></tr>
+                        <tr><td>bootstrap.css.map</td><td  class="text-right">492˙048</td></tr>
+                        <tr><td>bootstrap.min.css</td><td  class="text-right">155˙758</td></tr>
+                        <tr><td>bootstrap.min.css.map</td><td  class="text-right">625˙953</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th class="text-right">Összesen:</th>
+                            <th class="text-right">1 957 293</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                <table class="table table-striped table-hover table-sm col-5 offset-1" >
+                    <caption style="caption-side: top;">bootstrap-4.3.1-dist JS fájlok és méreteik</caption>
+                    <thead>
+                        <tr>
+                            <th scope="col">fájlnév</th>
+                            <th scope="col" class="text-right">méret<br>(byte)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>bootstrap.bundle.js</td><td  class="text-right">222˙911</td></tr>
+                        <tr><td>bootstrap.bundle.js.map</td><td  class="text-right">402˙249</td></tr>
+                        <tr><td>bootstrap.bundle.min.js</td><td  class="text-right">78˙635</td></tr>
+                        <tr><td>bootstrap.bundle.min.js.map</td><td  class="text-right">311˙949</td></tr>
+                        <tr><td>bootstrap.js</td><td  class="text-right">131˙637</td></tr>
+                        <tr><td>bootstrap.js.map</td><td  class="text-right">250˙568</td></tr>
+                        <tr><td>bootstrap.min.js</td><td  class="text-right">58˙072</td></tr>
+                        <tr><td>bootstrap.min.js.map</td><td  class="text-right">190˙253</td></tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th class="text-right">Összesen:</th>
+                            <th class="text-right">1 646 274</th>
+                        </tr>
+                    </tfoot>
+                </table>
+                </div>
+            </section>
+        </div>
+    </body>
+</html>

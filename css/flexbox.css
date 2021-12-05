@@ -1,0 +1,19 @@
+/* 
+    Created on : 2021. dec. 5., 8:12:04
+    Author     : Sanyi
+*/
+.pld01 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #95D1CC;
+  color: #22577E;
+  padding: 5px 10px;
+  margin: 5px 10px;
+}
+.pld01 > div {
+  flex: 1 1 200px;
+  border: 1px solid;
+  margin: 5px 10px;
+  padding: 5px 10px;
+  border-radius: 10px;
+}

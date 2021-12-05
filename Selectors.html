@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>CSS selectors</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
+        <link rel="stylesheet" href="css/selectors.css" />
+    </head>
+    <body>
+        <div>
+            <h1>CSS selectors</h1>
+            <ul>
+                <li>Egyszerű kijelölők <i>(elemek kiválasztása név, azonosító, osztály alapján)</i></li>
+                <li><a href="https://www.w3schools.com/css/css_combinators.asp" target="_blank">Az elemek között fennálló konkrét kapcsolat alapján választók</a>
+                    <ul>
+                        <li>(szóköz) leszármazott választó</li>
+                        <li>(>) gyermek választó</li>
+                        <li>(+) szomszédos testvér választó</li>
+                        <li>(~) általános testvér választó</li>
+                    </ul>
+                </li>
+                <li><a href="https://www.w3schools.com/css/css_pseudo_classes.asp" target="_blank">Pseudo-class selectors</a> <i>(elemek kiválasztása egy bizonyos állapot alapján)</i>
+       <ul>
+           <li>(elem:állapot)</li>
+           <li>(elem:hover) kurzor "rajta"</li>
+           <li>(a:visited) már látogatott link</li>
+           <li>...</li>
+       </ul>
+   </li>
+   <li><a href="https://www.w3schools.com/css/css_pseudo_elements.asp" target="_blank">Pseudo-elements selectors</a> <i>(kiválasztott elem egy részét jelöli meg)</i>
+       <ul>
+           <li>selector::pseudo-element</li>
+           <li>(p::first-line) a bekezdés első sora</li>
+           <li>(p::first-letter) a bekezdés első karaktere</li>
+           <li>...</li>
+       </ul>
+   </li>
+   <li><a href="https://www.w3schools.com/css/css_attribute_selectors.asp" target="_blank">Attribútum választók</a> <i>(az elemek kiválasztása attribútum vagy attribútumérték alapján)</i>
+       <ul>
+           <li>[attribute] vagy [attribute="value"]</li>
+           <li>[attribute~="value"] az attributum tartalmazza a karakter sorozatot</li>
+           <li>a[target] target attribútummal rendelkező elem</li>
+       </ul>
+   </li>
+</ul>
+            <p>Néhány példa a <a href="https://www.w3schools.com/cssref/css_selectors.asp" target="_blank">W3Schools-on</a> 
+                vagy gyakorláshoz egy nyers  <a href="selectorsPeldak.html" target="_blank">weboldal</a> 
+                </p>
+            <table>
+                <thead>
+                    <tr>	<th>Selector</th>	<th>Example</th>	<th>Example description</th>	<th>Példa leírásra</th></tr>
+                </thead>
+                <tbody>
+                    <tr>	<td>.class</td>	<td>.intro</td>	<td>Selects all elements with class="intro"</td>	<td>Kiválasztja az összes olyan elemet, amelynek class = "intro" formázási osztály a tulajdonsága</td>	</tr>
+                    <tr>	<td>.class1.class2</td>	<td>.name1.name2</td>	<td>Selects all elements with both name1 and name2 set within its class attribute</td>	<td>Kiválasztja az összes elemet, amelyekben a name1 és a name2 is meg van adva a class attribútumában</td>	</tr>
+                    <tr>	<td>.class1 .class2</td>	<td>.name1 .name2</td>	<td>Selects all elements with name2 that is a descendant of an element with name1</td>	<td>Kiválasztja az összes name2 elemet, amely a name1 elem leszármazottja</td>	</tr>
+                    <tr>	<td>#id</td>	<td>#firstname</td>	<td>Selects the element with id="firstname"</td>	<td>Kiválasztja az id = "keresztnév" elemet</td>	</tr>
+                    <tr>	<td>*</td>	<td>*</td>	<td>Selects all elements</td>	<td>Kiválasztja az összes elemet</td>	</tr>
+                    <tr>	<td>element</td>	<td>p</td>	<td>Selects all <p> elements</td>	<td>Kiválasztja az összes <p> elemet</td>	</tr>
+                    <tr>	<td>element.class</td>	<td>p.intro</td>	<td>Selects all <p> elements with class="intro"</td>	<td>Kiválasztja az összes <p> elemet, amelyek class = "intro"</td>	</tr>
+                    <tr>	<td>element,element</td>	<td>div, p</td>	<td>Selects all <div> elements and all <p> elements</td>	<td>Kiválasztja az összes <div> és minden <p> elemet</td>	</tr>
+                    <tr>	<td>element element</td>	<td>div p</td>	<td>Selects all <p> elements inside <div> elements</td>	<td>Kiválasztja az összes <p> elemet a <div> elemekben</td>	</tr>
+                    <tr>	<td>element>element</td>	<td>div > p</td>	<td>Selects all <p> elements where the parent is a <div> element</td>	<td>Kiválasztja az összes <p> elemet, ahol a szülő <div> elem</td>	</tr>
+                    <tr>	<td>element+element</td>	<td>div + p</td>	<td>Selects all <p> elements that are placed immediately after <div> elements</td>	<td>Kiválasztja az összes <p> elemet, amely közvetlenül a <div> elemek után helyezkedik el</td>	</tr>
+                    <tr>	<td>element1~element2</td>	<td>p ~ ul</td>	<td>Selects every <ul> element that are preceded by a <p> element</td>	<td>Kiválaszt minden <ul> elemet, amelyet egy <p> elem előz meg</td>	</tr>
+                    <tr>	<td>[attribute]</td>	<td>[target]</td>	<td>Selects all elements with a target attribute</td>	<td>Kiválasztja az összes elemet egy célattribútummal</td>	</tr>
+                    <tr>	<td>[attribute=value]</td>	<td>[target=_blank]</td>	<td>Selects all elements with target="_blank"</td>	<td>Kiválasztja az összes elemet, amelynek target = "_ blank"</td>	</tr>
+                    <tr>	<td>[attribute~=value]</td>	<td>[title~=flower]</td>	<td>Selects all elements with a title attribute containing the word "flower"</td>	<td>Kiválasztja az összes olyan elemet, amelynek címe attribútuma tartalmazza a "virág" szót</td>	</tr>
+                    <tr>	<td>[attribute|=value]</td>	<td>[lang|=en]</td>	<td>Selects all elements with a lang attribute value starting with "en"</td>	<td>Kiválasztja az összes elemet, amelynek lang attribútumértéke "en" -nel kezdődik</td>	</tr>
+                    <tr>	<td>[attribute^=value]</td>	<td>a[href^="https"]</td>	<td>Selects every <a> element whose href attribute value begins with "https"</td>	<td>Kiválaszt minden <a> elemet, amelynek href attribútumértéke "https" -nel kezdődik</td>	</tr>
+                    <tr>	<td>[attribute$=value]</td>	<td>a[href$=".pdf"]</td>	<td>Selects every <a> element whose href attribute value ends with ".pdf"</td>	<td>Kiválaszt minden <a> elemet, amelynek href attribútumértéke ".pdf" -nel végződik</td>	</tr>
+                    <tr>	<td>[attribute*=value]</td>	<td>a[href*="w3schools"]</td>	<td>Selects every <a> element whose href attribute value contains the substring "w3schools"</td>	<td>Kiválaszt minden <a> elemet, amelynek href attribútumértéke tartalmazza a "w3schools" alszöveget</td>	</tr>
+                    <tr>	<td>:active</td>	<td>a:active</td>	<td>Selects the active link</td>	<td>Kiválasztja az aktív linket</td>	</tr>
+                    <tr>	<td>::after</td>	<td>p::after</td>	<td>Insert something after the content of each <p> element</td>	<td>Helyezzen be valamit az egyes <p> elemek tartalma után</td>	</tr>
+                    <tr>	<td>::before</td>	<td>p::before</td>	<td>Insert something before the content of each <p> element</td>	<td>Helyezzen be valamit az egyes <p> elemek tartalma elé</td>	</tr>
+                    <tr>	<td>:checked</td>	<td>input:checked</td>	<td>Selects every checked <input> element</td>	<td>Minden bejelölt <input> elemet kiválaszt</td>	</tr>
+                    <tr>	<td>:default</td>	<td>input:default</td>	<td>Selects the default <input> element</td>	<td>Kiválasztja az alapértelmezett <input> elemet</td>	</tr>
+                    <tr>	<td>:disabled</td>	<td>input:disabled</td>	<td>Selects every disabled <input> element</td>	<td>Minden letiltott <input> elemet kiválaszt</td>	</tr>
+                    <tr>	<td>:empty</td>	<td>p:empty</td>	<td>Selects every <p> element that has no children (including text nodes)</td>	<td>Kiválaszt minden <p> elemet, amelynek nincs gyermeke (beleértve a szöveges csomópontokat is)</td>	</tr>
+                    <tr>	<td>:enabled</td>	<td>input:enabled</td>	<td>Selects every enabled <input> element</td>	<td>Minden engedélyezett <input> elemet kiválaszt</td>	</tr>
+                    <tr>	<td>:first-child</td>	<td>p:first-child</td>	<td>Selects every <p> element that is the first child of its parent</td>	<td>Kiválaszt minden <p> elemet, amely a szülő első gyermeke</td>	</tr>
+                    <tr>	<td>::first-letter</td>	<td>p::first-letter</td>	<td>Selects the first letter of every <p> element</td>	<td>Minden <p> elem első betűjét kiválasztja</td>	</tr>
+                    <tr>	<td>::first-line</td>	<td>p::first-line</td>	<td>Selects the first line of every <p> element</td>	<td>Minden <p> elem első sorát kiválasztja</td>	</tr>
+                    <tr>	<td>:first-of-type</td>	<td>p:first-of-type</td>	<td>Selects every <p> element that is the first <p> element of its parent</td>	<td>Kiválaszt minden <p> elemet, amely a szülőjének első <p> eleme</td>	</tr>
+                    <tr>	<td>:focus</td>	<td>input:focus</td>	<td>Selects the input element which has focus</td>	<td>Kiválasztja a fókuszált bemeneti elemet</td>	</tr>
+                    <tr>	<td>:fullscreen</td>	<td>:fullscreen</td>	<td>Selects the element that is in full-screen mode</td>	<td>Kiválasztja az elemet, amely teljes képernyős módban van</td>	</tr>
+                    <tr>	<td>:hover</td>	<td>a:hover</td>	<td>Selects links on mouse over</td>	<td>Kiválasztja az egér fölött található hivatkozásokat</td>	</tr>
+                    <tr>	<td>:in-range</td>	<td>input:in-range</td>	<td>Selects input elements with a value within a specified range</td>	<td>Kiválasztja a megadott tartományon belüli értékű beviteli elemeket</td>	</tr>
+                    <tr>	<td>:indeterminate</td>	<td>input:indeterminate</td>	<td>Selects input elements that are in an indeterminate state</td>	<td>Kiválasztja a bemeneti elemeket, amelyek határozatlan állapotban vannak</td>	</tr>
+                    <tr>	<td>:invalid</td>	<td>input:invalid</td>	<td>Selects all input elements with an invalid value</td>	<td>Kiválaszt minden érvénytelen értékű beviteli elemet</td>	</tr>
+                    <tr>	<td>:lang(language)</td>	<td>p:lang(it)</td>	<td>Selects every <p> element with a lang attribute equal to "it" (Italian)</td>	<td>Kiválaszt minden <p> elemet, amelynek lang attribútuma megegyezik az "it" értékkel (olasz)</td>	</tr>
+                    <tr>	<td>:last-child</td>	<td>p:last-child</td>	<td>Selects every <p> element that is the last child of its parent</td>	<td>Kiválaszt minden <p> elemet, amely a szülő utolsó gyermeke</td>	</tr>
+                    <tr>	<td>:last-of-type</td>	<td>p:last-of-type</td>	<td>Selects every <p> element that is the last <p> element of its parent</td>	<td>Kiválaszt minden <p> elemet, amely a szülő utolsó <p> eleme</td>	</tr>
+                    <tr>	<td>:link</td>	<td>a:link</td>	<td>Selects all unvisited links</td>	<td>Kiválasztja az összes meg nem látogatott linket</td>	</tr>
+                    <tr>	<td>:not(selector)</td>	<td>:not(p)</td>	<td>Selects every element that is not a <p> element</td>	<td>Minden olyan elemet kiválaszt, amely nem <p> elem</td>	</tr>
+                    <tr>	<td>:nth-child(n)</td>	<td>p:nth-child(2)</td>	<td>Selects every <p> element that is the second child of its parent</td>	<td>Kiválaszt minden <p> elemet, amely a szülő második gyermeke</td>	</tr>
+                    <tr>	<td>:nth-last-child(n)</td>	<td>p:nth-last-child(2)</td>	<td>Selects every <p> element that is the second child of its parent, counting from the last child</td>	<td>Kiválaszt minden <p> elemet, amely a szülő második gyermeke, az utolsó gyermektől számítva</td>	</tr>
+                    <tr>	<td>:nth-last-of-type(n)</td>	<td>p:nth-last-of-type(2)</td>	<td>Selects every <p> element that is the second <p> element of its parent, counting from the last child</td>	<td>Kiválaszt minden <p> elemet, amely a szülő második <p> eleme, az utolsó gyermektől számítva</td>	</tr>
+                    <tr>	<td>:nth-of-type(n)</td>	<td>p:nth-of-type(2)</td>	<td>Selects every <p> element that is the second <p> element of its parent</td>	<td>Kiválaszt minden <p> elemet, amely a szülőjének második <p> eleme</td>	</tr>
+                    <tr>	<td>:only-of-type</td>	<td>p:only-of-type</td>	<td>Selects every <p> element that is the only <p> element of its parent</td>	<td>Kiválaszt minden <p> elemet, amely a szülőjének egyetlen <p> eleme</td>	</tr>
+                    <tr>	<td>:only-child</td>	<td>p:only-child</td>	<td>Selects every <p> element that is the only child of its parent</td>	<td>Kiválaszt minden <p> elemet, amely a szülője egyetlen gyermeke</td>	</tr>
+                    <tr>	<td>:optional</td>	<td>input:optional</td>	<td>Selects input elements with no "required" attribute</td>	<td>Kiválasztja a "kötelező" attribútummal nem rendelkező beviteli elemeket</td>	</tr>
+                    <tr>	<td>:out-of-range</td>	<td>input:out-of-range</td>	<td>Selects input elements with a value outside a specified range</td>	<td>Kiválasztja a megadott tartományon kívüli értékű bemeneti elemeket</td>	</tr>
+                    <tr>	<td>::placeholder</td>	<td>input::placeholder</td>	<td>Selects input elements with the "placeholder" attribute specified</td>	<td>Kiválasztja a bemeneti elemeket a "helyőrző" attribútummal</td>	</tr>
+                    <tr>	<td>:read-only</td>	<td>input:read-only</td>	<td>Selects input elements with the "readonly" attribute specified</td>	<td>Kiválasztja a "readonly" attribútummal rendelkező bemeneti elemeket</td>	</tr>
+                    <tr>	<td>:read-write</td>	<td>input:read-write</td>	<td>Selects input elements with the "readonly" attribute NOT specified</td>	<td>Kiválasztja azokat a bemeneti elemeket, amelyeknél a "readonly" attribútum NEM szerepel</td>	</tr>
+                    <tr>	<td>:required</td>	<td>input:required</td>	<td>Selects input elements with the "required" attribute specified</td>	<td>Kiválasztja a "kötelező" attribútummal rendelkező bemeneti elemeket</td>	</tr>
+                    <tr>	<td>:root</td>	<td>:root</td>	<td>Selects the document's root element</td>	<td>Kiválasztja a dokumentum gyökérelemét</td>	</tr>
+                    <tr>	<td>::selection</td>	<td>::selection</td>	<td>Selects the portion of an element that is selected by a user</td>	<td>Kiválasztja az elemnek a felhasználó által kiválasztott részét</td>	</tr>
+                    <tr>	<td>:target</td>	<td>#news:target</td>	<td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>	<td>Kiválasztja az aktuális aktív #news elemet (rákattintott egy a horgony nevét tartalmazó URL-re)</td>	</tr>
+                    <tr>	<td>:valid</td>	<td>input:valid</td>	<td>Selects all input elements with a valid value</td>	<td>Kiválaszt minden érvényes értékű beviteli elemet</td>	</tr>
+                    <tr>	<td>:visited</td>	<td>a:visited</td>	<td>Selects all visited links</td>	<td>Kiválasztja az összes meglátogatott linket</td>	</tr>
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

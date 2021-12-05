@@ -1,0 +1,19 @@
+body {
+  font-family: 'Courier New', monospace;
+}
+
+.name1 .name2 {
+    font-family: Verdana, sans-serif;
+}
+.normal {
+   background-color: #C6EFCE;
+   color: #006100;
+}
+.rossz {
+    background-color: #FFC7CE;
+    color: #9C0006;
+}
+.semleges {
+    background-color: #FFEB9C;
+    color: #9C5700;
+}

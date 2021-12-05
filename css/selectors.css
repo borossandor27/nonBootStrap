@@ -1,0 +1,18 @@
+/* 
+    Created on : 2021. dec. 4., 20:56:11
+*/
+table, th, td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px 10px;
+}
+
+tbody tr:nth-child(odd){
+    background-color: grey;
+    color: white;
+}
+tr:nth-child(odd) td{
+    border-color: white;
+}
