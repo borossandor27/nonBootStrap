@@ -9,16 +9,25 @@ and open the template in the editor.
         <title>TODO supply a title</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="icons/favicon.ico">
         <style>
+            * {
+                font-size: 1.1em;
+            }
+            #info {
+                float: left;
+            }
             #grid {
-                height: 200px;
-                width: 200px;
+                height: 500px;
+                width: 500px;
                 display: grid;
                 gap: 10px;
-                grid-template: repeat(4, 1fr) / repeat(2, 1fr); /* sor/oszlop */
+                grid-template: repeat(4, 1fr) / repeat(2, 1fr); /* 4 sor/2 oszlop */
                 grid-auto-flow: row;  /* or 'row', 'row dense', 'column dense' */
             }
-
+            #grid div {
+                border: 1px solid;
+            }
             #item1 {
               background-color: lime;
               grid-row-start: 3;
@@ -42,23 +51,54 @@ and open the template in the editor.
             }
 
         </style>
+        <script>
+            function changeGridAutoFlow() {
+                var grid = document.getElementById("grid");
+                var direction = document.getElementById("direction");
+                var dense = document.getElementById("dense");
+                var gridAutoFlow = direction.value === "row" ? "row" : "column";
+
+                if (dense.checked) {
+                  gridAutoFlow += " dense";
+                }
+
+                grid.style.gridAutoFlow = gridAutoFlow;
+              }
+        </script>
     </head>
     <body>
-        <div>
-        <div id="grid">
-            <div id="item1">1</div>
-            <div id="item2">2</div>
-            <div id="item3">3</div>
-            <div id="item4">4</div>
-            <div id="item5">5</div>
-        </div>
-        <select id="direction">
-            <option value="column">column</option>
-            <option value="row">row</option>
-        </select>
-            <input id="dense" type="checkbox">
+        <h1>grid-auto-flow</h1>
+        <p>A <dfn>grid-auto-flow</dfn> tulajdonság szabályozza, hogy az elemek hogyan kerüljenek be a rácsba.</p>
+        <div style="float: left; margin-right: 40px;">
+            <div id="grid">
+                <div id="item1">1</div>
+                <div id="item2">2</div>
+                <div id="item3">3</div>
+                <div id="item4">4</div>
+                <div id="item5">5</div>
+            </div>
+         </div>
+        <div id="info">
+           <select id="direction" onchange="changeGridAutoFlow()">
+                <option value="column">column</option>
+                <option value="row">row</option>
+            </select>
+            <input id="dense" type="checkbox" onchange="changeGridAutoFlow()">
             <label for="dense">dense</label>
-
+            <dl>
+                <dt><dfn>row</dfn></dt>
+                <dd>Alapértelmezett érték. Az elemek elhelyezésénél a megkezdett sor kitöltésére törekszik.</dd>
+                <dt><dfn>column</dfn></dt>
+                <dd>Az elemek elhelyezésénél a megkezdett oszlop kitöltésére törekszik.</dd>
+                <dt><dfn>dense</dfn></dt>
+                <dd>A rácsban lévő lyukak (már átlépett cellák) kitöltésére törekszik. Vissza is tud menni.</dd>
+                <dt><dfn>row dense</dfn></dt>
+                <dd>Az aktuális sorban keres üres cellát, mielőtt a sort folytatja.</dd>
+                <dt><dfn>column dense</dfn></dt>
+                <dd>Az aktuális oszlopban keres üres cellát, mielőtt az oszlopot folytatja.</dd>
+                
+            </dl>
+            <p></p>
         </div>
     </body>
 </html>
