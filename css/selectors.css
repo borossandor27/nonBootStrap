@@ -1,6 +1,9 @@
 /* 
     Created on : 2021. dec. 4., 20:56:11
 */
+table{
+    margin: 25px;
+}
 table, th, td {
     border: 1px solid grey;
     border-collapse: collapse;
